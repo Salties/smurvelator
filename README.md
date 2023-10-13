@@ -1,4 +1,4 @@
-# smurvelator
+# smurilator
 Experiments to integrate Smurf into verilated verilog code.
 
 Platform: Arch Linux 64
