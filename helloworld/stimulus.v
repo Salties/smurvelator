@@ -1,4 +1,4 @@
-module our;
+module stimulus;
 initial
 begin
     $display("hello,world");

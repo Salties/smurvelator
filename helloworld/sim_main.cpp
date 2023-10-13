@@ -1,22 +1,27 @@
-#include "Vour.h"
+//VPI
+#include "Vstimulus.h"
 #include "verilated.h"
-#include <iostream>
+
+//Smurf API
 #include "smurf/smurf.h"
 #include "smurf/emulator.h"
 
+//System
+#include <iostream>
+
 using namespace std;
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     int count = 0;
-    VerilatedContext* contextp = new VerilatedContext;
+    VerilatedContext *contextp = new VerilatedContext;
     contextp->commandArgs(argc, argv);
-    Vour* top = new Vour{contextp};
+    Vstimulus *top = new Vstimulus { contextp };
 
-    while(!contextp->gotFinish())
+    while (!contextp->gotFinish())
     {
         top->eval();
-        cout<<count<<endl;
+        cout << count << endl;
     }
 
     delete top;

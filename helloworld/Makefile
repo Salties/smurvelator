@@ -1,4 +1,4 @@
-TARGET=our
+TARGET=stimulus
 SRC=${TARGET}.v
 STIMULUS=sim_main.cpp
 VLIBS='-lsmurf -lsmurfemulator'
@@ -15,6 +15,9 @@ run: build
 	./obj_dir/V${TARGET}
 
 clean:
-	rm -rf obj_dir
+	rm -rf obj_dir *~
 
 rebuild: clean build
+
+indent:
+	indent *.cpp
