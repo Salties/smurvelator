@@ -1,4 +1,4 @@
-TARGET=stimulus
+TARGET=counter
 SRC=${TARGET}.v
 STIMULUS=sim_main.cpp
 VLIBS='-lsmurf -lsmurfemulator'

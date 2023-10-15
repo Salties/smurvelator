@@ -6,7 +6,7 @@ module counter(
 
 always @ (posedge clk)
 begin
-    if !(rst)
+    if (!rst)
     begin
         out <= 0;
     end
@@ -14,6 +14,5 @@ begin
     begin
         out <= out + 1;
     end
-
 end
 endmodule
