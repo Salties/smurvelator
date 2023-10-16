@@ -2,7 +2,7 @@ TARGET=counter
 SRC=${TARGET}.v
 STIMULUS=sim_main.cpp
 VLIBS='-lsmurf -lsmurfemulator'
-VARGS=--cc --exe --build -Wall -LDFLAGS ${VLIBS}
+VARGS=--cc --exe --build -Wall -LDFLAGS ${VLIBS} -CFLAGS -g
 OBJ=./obj_dir/
 
 all: build
@@ -15,7 +15,7 @@ run: build
 	./obj_dir/V${TARGET}
 
 clean:
-	rm -rf obj_dir *~
+	rm -rf obj_dir *~ tags 
 
 rebuild: clean build
 
