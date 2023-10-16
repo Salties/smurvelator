@@ -1,0 +1,17 @@
+{
+    "version": "2",
+    "components": {
+        "clk": {
+            "type": "BOOL",
+            "len": 1
+        },
+        "rst": {
+            "type": "BOOL",
+            "len": 1
+        },
+        "out": {
+            "type": "INT32",
+            "len": 1
+        }
+    }
+}
